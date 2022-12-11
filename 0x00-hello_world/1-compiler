@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -C $CFILE > ${CFILE::-2}”.o”
+gcc -C $CFILE -o 1-compiler.o
