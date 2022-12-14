@@ -10,8 +10,8 @@ int main(void)
 {
 	char lower;
 
-	for (lower = 'a'; lower < 'z'; lower++)
-		putchar(reverse(lower));
+	for (lower = 'z'; lower < 'a'; lower++)
+		putchar(lower);
 
 	putchar('\n');
 
