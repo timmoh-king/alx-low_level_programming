@@ -5,7 +5,7 @@
  * @a: The character to be checked
  * @b: The character to be checked
  *
- * Return: Integer
+ * Return: Sum of two integers
  */
 int add(int a, int b)
 {
