@@ -10,21 +10,8 @@ int _isupper(int c)
 {
 	for (c = 'A'; c <= 'Z'; c++)
 	{
-		for (c = 'a'; c <= 'z'; c++)
-		{
-			putchar("%d", c);
-			putchar(':');
-			putchar(' ');
-			putchar('\n');
-
-			return (0);
-		}
-
-		putchar("%d", c);
-		putchar(':');
-		putchar(' ');
-		putchar('\n');
-
 		return (1);
 	}
+	else
+		return (0);
 }
