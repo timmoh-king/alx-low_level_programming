@@ -14,6 +14,7 @@ int _isupper(int c)
 		{
 			putchar("%d", c);
 			putchar(':');
+			putchar(' ');
 			putchar('\n');
 
 			return (0);
@@ -21,6 +22,7 @@ int _isupper(int c)
 
 		putchar("%d", c);
 		putchar(':');
+		putchar(' ');
 		putchar('\n');
 
 		return (1);
