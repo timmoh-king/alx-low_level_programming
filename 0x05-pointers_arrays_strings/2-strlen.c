@@ -8,9 +8,16 @@
  */
 int _strlen(char *s)
 {
-	char b[];
+	int len = 0;
 
-	s = sizeof(b);
+	if (s)
+	{
+		while (*(s + len))
+		{
+			++len;
+		}
 
-	return (s);
+	}
+
+	return (len);
 }
