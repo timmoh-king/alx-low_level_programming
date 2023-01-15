@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 	int len1 = strlen(s1);
 	int len2 = strlen(s2);
 	int len3 = (len1 + len2 + 1);
-	int i;
+	int i, j;
 	char *temp;
 
 	if (s1 == NULL || s2 == NULL)
@@ -32,35 +32,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		temp[i] = s1[i];
 
-		for (i = 0; i < len3; i++)
+		for (j = 0; j < len3; j++)
 		{
-			temp[i + len1] = s2[i];
+			temp[j] = s2[j];
 		}
 	}
 
-	temp[i] = '\0';
 	return (temp);
-}
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-/**
- *  * main - check the code for ALX School students.
- *   *
- *    * Return: Always 0.
- *     */
-int main(void)
-{
-	    char *s;
-
-	        s = str_concat("Betty ", "Holberton");
-		    if (s == NULL)
-			        {
-					        printf("failed\n");
-						        return (1);
-							    }
-		        printf("%s\n", s);
-			    free(s);
-			        return (0);
 }
