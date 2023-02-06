@@ -5,7 +5,7 @@
  * insert_nodeint_at_index - inserts a new node in a linked list
  * @head: a pointer to the first node
  * @idx: the position of the node
- * @n: integer value
+ * @n: integer value to be added
  *
  * Return: the address of the new node, or NULL if it failed
  */
