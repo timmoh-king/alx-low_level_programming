@@ -7,19 +7,25 @@
  * @idx: the position of the node
  * @n: integer value
  *
- * Returns: the address of the new node, or NULL if it failed
+ * Return: the address of the new node, or NULL if it failed
  */
-listint_t *insert_nodeint_at_index
-(listint_t **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int i = 1;
 	listint_t *newnode, *temp;
 
-	temp = *head;
 	newnode = malloc(sizeof(listint_t));
 
 	if (newnode == NULL)
 		return (NULL);
+
+	temp = *head;
+	if (idx == 0)
+	{
+		newnode->next = temp;
+		*head = newnode;
+		return (newnode);
+	}
 
 	while (i < idx)
 	{
