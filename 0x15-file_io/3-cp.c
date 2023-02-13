@@ -32,14 +32,21 @@ void err_write(char *write)
 }
 /**
  * file_close - if the file cannot close
- * fp: the filename
+ * @fp: the filename
  */
 void file_close(int fp)
 {
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fp);
 	exit(100);
 }
-int main (int argc, char *argv[])
+/**
+ * main - the main function
+ * @argc: the number of arguments passed
+ * @argv: the argument
+ *
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char *argv[])
 {
 	int src, dest, wr, rd, fp;
 	char buff[1024];
@@ -57,13 +64,11 @@ int main (int argc, char *argv[])
 	if (dest == -1)
 		err_write(argv[2]);
 
-	rd = read(src, buff, 1024);
-
-	if (rd == -1)
-		err_read(argv[1]);
-
-	while (rd)
+	while (rd = read(src, buff, 1024))
 	{
+		if (rd == -1)
+			err_read(argv[1]);
+
 		wr = write(dest, buff, rd);
 		if (wr == -1 || wr != rd)
 			err_write(argv[2]);
