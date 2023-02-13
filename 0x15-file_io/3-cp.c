@@ -57,16 +57,14 @@ int main (int argc, char *argv[])
 	if (dest == -1)
 		err_write(argv[2]);
 
-	while (1)
+	rd = read(src, buff, 1024);
+
+	if (rd == -1)
+		err_read(argv[1]);
+
+	while (rd)
 	{
-		rd = read(src, buff, 1024);
-		if (rd == -1)
-			err_read(argv[1]);
-
 		wr = write(dest, buff, rd);
-		if (wr == -1)
-			err_write(argv[2]);
-
 		if (wr == -1 || wr != rd)
 			err_write(argv[2]);
 	}
