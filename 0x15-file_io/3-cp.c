@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	if (dest == -1)
 		err_write(argv[2]);
 
-	while (rd = read(src, buff, 1024))
+	while ((rd = read(src, buff, 1024)))
 	{
 		if (rd == -1)
 			err_read(argv[1]);
