@@ -2,7 +2,7 @@
 
 /**
  * insert_dnodeint_at_index - insert node at a given pos
- * @head: the head node
+ * @h: the head node
  * @idx: the position of the node
  * @n: the integer value
  *
