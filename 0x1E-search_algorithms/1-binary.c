@@ -20,6 +20,7 @@ int binary_search(int *array, size_t size, int value)
 
 	while (l <= r)
 	{
+		printf("searching in array: %u\n", array);
 		mid = ceil(l + (r - l) / 2);
 
 		if (array[mid] == value)
