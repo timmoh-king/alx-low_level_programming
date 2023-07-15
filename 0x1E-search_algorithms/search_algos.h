@@ -1,6 +1,6 @@
 #ifndef ALGOS_HEADER
 #define ALGOS_HEADER
-#define min(x, y) (((x) < (y)) ? (x) : (y))
+#define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
 #include <stdio.h>
 #include <string.h>

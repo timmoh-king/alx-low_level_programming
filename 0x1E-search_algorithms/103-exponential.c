@@ -10,7 +10,6 @@
  * Return: if value is not in array return NULL ior -1
  */
 
-int binary_search(int *array, size_t size, int value);
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t i = 1;
@@ -21,5 +20,5 @@ int exponential_search(int *array, size_t size, int value)
 	while (i < size && array[i] <= value)
 		i = i * 2;
 
-	return (binary_search(array, min(i, size - 1), value));
+	return (binary_search(array, MIN(i, size - 1), value));
 }
