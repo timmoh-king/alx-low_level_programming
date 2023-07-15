@@ -1,8 +1,10 @@
 #ifndef ALGOS_HEADER
 #define ALGOS_HEADER
+#define min(x, y) (((x) < (y)) ? (x) : (y))
 
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 #include <math.h>
 
 int linear_search(int *array, size_t size, int value);
