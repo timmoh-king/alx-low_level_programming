@@ -13,12 +13,19 @@
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t i = 1;
+	size_t l = 0;
+	size_t r = size - 1;
 
 	if (array == NULL)
 		return (-1);
 
-	while (i < size && array[i] <= value)
-		i = i * 2;
+	while (i < (r - l))
+	{
+		if (array[i] < value)
+			i = i * 2;
+		else
+			return (-1);
+	}
 
-	return (binary_search(array, MIN(i, size - 1), value));
+	return (binary_search(array, MIN(i, r), value));
 }
